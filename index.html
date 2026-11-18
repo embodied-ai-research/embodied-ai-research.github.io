@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jiacheng Li · Embodied AI &amp; Robot Manipulation</title>
+    <meta
+      name="description"
+      content="Jiacheng Li — researcher at the University of Science and Technology of China working on embodied AI, manipulation learning, and visuomotor skills."
+    />
+    <meta property="og:title" content="Jiacheng Li · Embodied AI &amp; Robot Manipulation" />
+    <meta
+      property="og:description"
+      content="Embodied AI, manipulation learning, visuomotor skills, and safe robot learning."
+    />
+    <meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#14161a" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script>
+      (function () {
+        var root = document.documentElement;
+        var theme = localStorage.getItem("theme");
+        if (theme) root.dataset.theme = theme;
+        var lang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang");
+        if (lang === "zh" || lang === "en") {
+          root.dataset.lang = lang;
+          root.lang = lang === "zh" ? "zh-CN" : "en";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#top"><span data-l="en">Jiacheng Li</span><span data-l="zh">李嘉诚</span></a>
+        <nav class="nav" aria-label="Sections">
+          <a href="#about"><span data-l="en">About</span><span data-l="zh">简介</span></a>
+          <a href="#publications"><span data-l="en">Publications</span><span data-l="zh">论文</span></a>
+        </nav>
+        <div class="topbar-actions">
+          <div class="lang-switch" role="group" aria-label="Language / 语言">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+          </div>
+          <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" /></svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="layout">
+      <aside class="profile" aria-label="Profile">
+        <div class="monogram" aria-hidden="true"><span>JL</span></div>
+        <h1 class="name"><span data-l="en">Jiacheng Li</span><span data-l="zh">李嘉诚 <small>Jiacheng Li</small></span></h1>
+        <p class="role">
+          <span data-l="en">Embodied AI · Robot Manipulation</span>
+          <span data-l="zh">具身智能 · 机器人操作</span>
+        </p>
+        <p class="affiliation">
+          <a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener" data-l="en">University of Science and Technology of China</a>
+          <a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener" data-l="zh">中国科学技术大学</a>
+        </p>
+
+        <ul class="links">
+          <li>
+            <a href="https://scholar.google.com/citations?user=2q7VJ1EAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 1.5 9.5 12 16l8.5-5.3V17h2V9.5L12 3Zm-6 9.6V16c0 2.2 2.7 4 6 4s6-1.8 6-4v-3.4l-6 3.7-6-3.7Z" /></svg>
+              Google Scholar
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/embodied-ai-research" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.8a10.2 10.2 0 0 0-3.2 19.9c.5.1.7-.2.7-.5v-1.8c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .8.1-.7.4-1.1.6-1.4-2.3-.3-4.7-1.1-4.7-5 0-1.1.4-2 1-2.7-.1-.3-.5-1.3.1-2.8 0 0 .9-.3 2.8 1a9.6 9.6 0 0 1 5.1 0c1.9-1.3 2.8-1 2.8-1 .6 1.5.2 2.5.1 2.8.7.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.7 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A10.2 10.2 0 0 0 12 1.8Z" /></svg>
+              GitHub
+            </a>
+          </li>
+        </ul>
+      </aside>
+
+      <div class="content">
+        <section id="about" class="section">
+          <h2 class="section-title"><span data-l="en">About</span><span data-l="zh">简介</span></h2>
+
+          <div data-l="en">
+            <p>
+              I am a researcher at the
+              <a href="https://en.ustc.edu.cn/" target="_blank" rel="noopener">University of Science and Technology of China (USTC)</a>,
+              where I am a member of the <strong>AIR Lab</strong> (Autonomous and Intelligent Robot Laboratory),
+              advised by Prof. Jiahu Qin and Prof. Qingchen Liu. I work on <strong>embodied AI for robot manipulation</strong>,
+              studying how robots can acquire reliable visuomotor skills: learning to see, plan, and act in
+              contact-rich, uncertain environments without giving up safety.
+            </p>
+            <p>
+              My earlier work centered on safe learning-based control. I now bring these foundations to learned
+              manipulation policies, including brain-inspired vision-action models for efficient visuomotor control.
+            </p>
+          </div>
+
+          <div data-l="zh">
+            <p>
+              我目前在<a href="https://www.ustc.edu.cn/" target="_blank" rel="noopener">中国科学技术大学</a>自主与智能机器人实验室（AIR Lab，Autonomous and Intelligent Robot Laboratory）从事研究工作，师从秦家虎教授和刘卿尘教授。我的研究方向是<strong>面向机器人操作的具身智能</strong>，关注机器人如何获得可靠的视觉运动技能：
+              在接触丰富、充满不确定性的环境中学会感知、规划与执行，同时保证安全。
+            </p>
+            <p>
+              我早期的工作聚焦于基于学习的安全控制。目前，我正将这些基础延伸到可学习的操作策略中，包括面向高效视觉运动控制的类脑视觉-动作模型。
+            </p>
+          </div>
+
+          <dl class="focus">
+            <div>
+              <dt><span data-l="en">Research interests</span><span data-l="zh">研究兴趣</span></dt>
+              <dd>
+                <ul class="tags" data-l="en">
+                  <li>Embodied AI</li>
+                  <li>Manipulation learning</li>
+                  <li>Visuomotor skills</li>
+                  <li>Safe robot learning</li>
+                  <li>Motion planning</li>
+                </ul>
+                <ul class="tags" data-l="zh">
+                  <li>具身智能</li>
+                  <li>操作技能学习</li>
+                  <li>视觉运动技能</li>
+                  <li>安全机器人学习</li>
+                  <li>运动规划</li>
+                </ul>
+              </dd>
+            </div>
+            <div>
+              <dt><span data-l="en">Research question</span><span data-l="zh">核心问题</span></dt>
+              <dd class="quote">
+                <span data-l="en">How can robots learn manipulation skills that are both data-efficient and dependably safe once they leave the lab?</span>
+                <span data-l="zh">如何让机器人学到既数据高效、又能在走出实验室后依然安全可靠的操作技能？</span>
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+
+        <section id="publications" class="section">
+          <div class="section-head">
+            <h2 class="section-title"><span data-l="en">Publications</span><span data-l="zh">论文</span></h2>
+            <div class="filter" role="tablist" aria-label="Filter publications">
+              <button type="button" role="tab" class="is-active" data-filter="all" aria-selected="true">
+                <span data-l="en">All</span><span data-l="zh">全部</span>
+              </button>
+              <button type="button" role="tab" data-filter="first" aria-selected="false">
+                <span data-l="en">First author</span><span data-l="zh">第一作者</span>
+              </button>
+            </div>
+          </div>
+          <p class="pub-legend">
+            <span data-l="en"><span class="me">J. Li</span> denotes me.</span>
+            <span data-l="zh"><span class="me">J. Li</span> 为本人。</span>
+          </p>
+          <div id="pub-list" class="pub-list" aria-live="polite">
+            <p class="pub-empty"><span data-l="en">Loading publications…</span><span data-l="zh">正在加载论文…</span></p>
+          </div>
+          <noscript>
+            <p data-l="en">
+              Enable JavaScript to see the publication list, or browse it on
+              <a href="https://scholar.google.com/citations?user=2q7VJ1EAAAAJ&amp;hl=en">Google Scholar</a>.
+            </p>
+            <p data-l="zh">请启用 JavaScript 查看论文列表，或访问 <a href="https://scholar.google.com/citations?user=2q7VJ1EAAAAJ&amp;hl=zh-CN">Google Scholar</a>。</p>
+          </noscript>
+        </section>
+
+        <footer class="footer">
+          <p>
+            © <span data-year>2026</span> <span data-l="en">Jiacheng Li</span><span data-l="zh">李嘉诚</span> ·
+            <span data-l="en">Last updated November 2026</span><span data-l="zh">最后更新于 2026 年 11 月</span>
+          </p>
+        </footer>
+      </div>
+    </main>
+
+    <script type="module" src="./assets/main.js"></script>
+  </body>
+</html>

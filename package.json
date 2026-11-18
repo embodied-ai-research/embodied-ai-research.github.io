@@ -1,0 +1,14 @@
+{
+  "name": "jiacheng-li-homepage",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Personal academic homepage of Jiacheng Li (USTC) — embodied AI, manipulation learning, visuomotor skills.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4627 --strictPort",
+    "preview": "vite preview --host 0.0.0.0 --port 4628"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  }
+}
