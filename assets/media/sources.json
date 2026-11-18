@@ -1,0 +1,92 @@
+[
+  {
+    "id": "li2026ctvam",
+    "slug": "ct-vam",
+    "bvid": "BV1qkEr68E4M",
+    "start": 162,
+    "duration": 9,
+    "crop": null,
+    "width": 384,
+    "description": "Robot manipulator interacting with a box; original 3x playback retained.",
+    "height": 216,
+    "frames": 72,
+    "url": "https://www.bilibili.com/video/BV1qkEr68E4M/",
+    "fps": 8
+  },
+  {
+    "id": "li2026gpbound",
+    "slug": "gp-bound",
+    "bvid": "BV1TF4m1A7eC",
+    "start": 31,
+    "duration": 9,
+    "crop": [
+      470,
+      48,
+      260,
+      234
+    ],
+    "width": 320,
+    "description": "NCUB balloon manipulation experiment, cropped to the proposed method.",
+    "height": 288,
+    "frames": 72,
+    "url": "https://www.bilibili.com/video/BV1TF4m1A7eC/",
+    "fps": 8
+  },
+  {
+    "id": "guo2026dgacmp",
+    "slug": "dg-acmp",
+    "bvid": "BV1YP9TBGEzr",
+    "start": 108,
+    "duration": 9,
+    "crop": [
+      434,
+      134,
+      374,
+      316
+    ],
+    "width": 384,
+    "description": "DG-ACMP towel manipulation with damping enabled; method label retained.",
+    "height": 324,
+    "frames": 72,
+    "url": "https://www.bilibili.com/video/BV1YP9TBGEzr/",
+    "fps": 8
+  },
+  {
+    "id": "jiang2026stgp",
+    "slug": "stgp",
+    "bvid": "BV1WxN36XEQB",
+    "start": 142,
+    "duration": 9,
+    "crop": [
+      492,
+      126,
+      204,
+      138
+    ],
+    "width": 320,
+    "description": "BU-STGP third-person real-robot navigation; original 10x playback retained.",
+    "height": 216,
+    "frames": 72,
+    "url": "https://www.bilibili.com/video/BV1WxN36XEQB/",
+    "fps": 8
+  },
+  {
+    "id": "li2023uscbf",
+    "slug": "us-cbf",
+    "bvid": "BV1aj42197G2",
+    "start": 127,
+    "duration": 9,
+    "crop": [
+      302,
+      0,
+      550,
+      480
+    ],
+    "width": 384,
+    "description": "Overhead quadrotor navigation with pedestrians and fan disturbances.",
+    "height": 335,
+    "frames": 72,
+    "url": "https://www.bilibili.com/video/BV1aj42197G2/",
+    "fps": 8
+  }
+]

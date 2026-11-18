@@ -1,12 +1,18 @@
-import { ME, publications } from "./publications.js";
+import { ME, publications } from "./publications.js?v=20261118-media";
 
 const LINK_LABELS = {
-  project: ["Project page", "项目主页"],
   arxiv: ["arXiv", "arXiv"],
+  publisher: ["Paper", "论文官网"],
+  project: ["Project page", "项目主页"],
   pdf: ["PDF", "PDF"],
   code: ["Code", "代码"],
   video: ["Video", "视频"],
   doi: ["DOI", "DOI"],
+};
+
+const CONTRIBUTION_LABELS = {
+  "co-first": ["Co-first author", "共同第一作者"],
+  corresponding: ["Corresponding author", "通讯作者"],
 };
 
 const escapeHtml = (s) =>
@@ -33,9 +39,8 @@ function renderAuthors(authors) {
 }
 
 function renderPub(pub) {
-  const isFirst = pub.authors[0] === ME;
-  const primary = pub.links.project || pub.links.arxiv || pub.links.pdf || pub.links.doi;
-  const scholarSearch = `https://scholar.google.com/scholar?q=${encodeURIComponent(`"${pub.title}"`)}`;
+  const contribution = CONTRIBUTION_LABELS[pub.contribution];
+  const primary = pub.links.arxiv || pub.links.publisher || pub.links.project || pub.links.pdf || pub.links.doi;
 
   const titleHtml = primary
     ? `<a href="${escapeHtml(primary)}" target="_blank" rel="noopener">${escapeHtml(pub.title)}</a>`
@@ -44,34 +49,41 @@ function renderPub(pub) {
   const links = Object.entries(LINK_LABELS)
     .filter(([key]) => pub.links[key])
     .map(([key, [en, zh]]) => `<a href="${escapeHtml(pub.links[key])}" target="_blank" rel="noopener"><span data-l="en">${en}</span><span data-l="zh">${zh}</span></a>`);
-  links.push(`<a href="${scholarSearch}" target="_blank" rel="noopener"><span data-l="en">Scholar</span><span data-l="zh">学术搜索</span></a>`);
   links.push(
     `<button type="button" data-bib="${pub.id}" aria-expanded="false" aria-controls="bib-${pub.id}">BibTeX</button>`,
   );
 
   return `
-    <article class="pub${pub.featured ? " is-featured" : ""}" data-first="${isFirst}">
+    <article class="pub${pub.media ? " has-media" : ""}" id="${pub.id}">
+      ${pub.media ? `<a class="pub-media" href="${escapeHtml(pub.links.video)}" target="_blank" rel="noopener">
+        <picture>
+          <source media="(prefers-reduced-motion: reduce)" srcset="${escapeHtml(pub.media.poster)}">
+          <source type="image/webp" srcset="${escapeHtml(pub.media.webp)}">
+          <img src="${escapeHtml(pub.media.gif)}" alt="${escapeHtml(pub.media.alt.en)}" data-alt-en="${escapeHtml(pub.media.alt.en)}" data-alt-zh="${escapeHtml(pub.media.alt.zh)}" width="${pub.media.width}" height="${pub.media.height}" loading="lazy" decoding="async">
+        </picture>
+        <span class="media-link"><span aria-hidden="true">▶</span> <span data-l="en">Watch video</span><span data-l="zh">观看视频</span></span>
+      </a>` : ""}
+      <div class="pub-content">
       <h3 class="pub-title">${titleHtml}</h3>
       <p class="pub-authors">${renderAuthors(pub.authors)}</p>
       <p class="pub-venue">
         <span class="badge">${escapeHtml(pub.venueShort)} ${pub.year}</span>
-        ${isFirst ? '<span class="badge badge-muted"><span data-l="en">First author</span><span data-l="zh">第一作者</span></span>' : ""}
+        ${contribution ? `<span class="badge badge-muted"><span data-l="en">${contribution[0]}</span><span data-l="zh">${contribution[1]}</span></span>` : ""}
         <em>${escapeHtml(pub.venue)}</em>
       </p>
       <div class="pub-links">${links.join("")}</div>
       <pre class="bibtex" id="bib-${pub.id}" hidden>${escapeHtml(toBibtex(pub))}</pre>
+      </div>
     </article>`;
 }
 
-function renderPublications(filter) {
+function renderPublications() {
   const list = document.getElementById("pub-list");
-  const items = publications
-    .filter((p) => filter !== "first" || p.authors[0] === ME)
-    .sort((a, b) => b.year - a.year);
+  const items = [...publications].sort((a, b) => b.year - a.year);
 
   if (!items.length) {
     list.innerHTML =
-      '<p class="pub-empty"><span data-l="en">No publications match this filter yet.</span><span data-l="zh">暂无符合条件的论文。</span></p>';
+      '<p class="pub-empty"><span data-l="en">Publications will be added here.</span><span data-l="zh">论文将在此处更新。</span></p>';
     return;
   }
 
@@ -85,20 +97,6 @@ function renderPublications(filter) {
     html += renderPub(pub);
   }
   list.innerHTML = html;
-}
-
-function initFilter() {
-  const buttons = document.querySelectorAll(".filter button");
-  buttons.forEach((btn) =>
-    btn.addEventListener("click", () => {
-      buttons.forEach((b) => {
-        const active = b === btn;
-        b.classList.toggle("is-active", active);
-        b.setAttribute("aria-selected", String(active));
-      });
-      renderPublications(btn.dataset.filter);
-    }),
-  );
 }
 
 function initBibtexToggles() {
@@ -132,6 +130,9 @@ function setLang(lang) {
   document.querySelectorAll("[data-set-lang]").forEach((b) =>
     b.setAttribute("aria-pressed", String(b.dataset.setLang === lang)),
   );
+  document.querySelectorAll("[data-alt-en]").forEach((image) => {
+    image.alt = lang === "zh" ? image.dataset.altZh : image.dataset.altEn;
+  });
 }
 
 function initLangSwitch() {
@@ -161,8 +162,7 @@ function initScrollSpy() {
 
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 
-renderPublications("all");
-initFilter();
+renderPublications();
 initBibtexToggles();
 initThemeToggle();
 initLangSwitch();

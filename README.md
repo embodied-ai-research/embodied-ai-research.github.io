@@ -18,7 +18,8 @@ npm run dev        # http://localhost:4627 ，保存文件后浏览器自动刷�
 | 想改的内容 | 文件 |
 | --- | --- |
 | 个人简介、侧边栏链接 | `index.html` |
-| 论文列表（作者里写 `"J. Li"` 会自动加粗） | `assets/publications.js` |
+| 论文列表、共同一作/通讯作者标注、官网和视频链接 | `assets/publications.js` |
+| 论文动图、静态预览和片段来源记录 | `assets/media/` |
 | 颜色、字体、布局 | `assets/style.css`（顶部 `:root` 变量） |
 
 ## 部署到 GitHub Pages
@@ -36,3 +37,11 @@ npm run dev        # http://localhost:4627 ，保存文件后浏览器自动刷�
 直接发布根目录的 `index.html`、`assets/` 和 `.nojekyll`，不运行 `vite build`。
 
 几分钟后访问 <https://embodied-ai-research.github.io>。
+
+## 论文与演示素材
+
+- 所有论文统一展示，不按第一作者筛选，也不设置普通第一作者徽标。
+- `contribution` 仅使用经本人确认的 `co-first`（共同第一作者）或 `corresponding`（通讯作者）。
+- 有 arXiv 的论文保留 arXiv 链接，其余标题链接到出版社的正式文章页面。
+- `media` 保存动图的 `webp` / `gif`、静态 `poster`、尺寸和中英文 `alt`；优先加载动画 WebP，GIF 用于兼容回退。系统开启减少动态效果时显示静态预览。
+- `assets/media/sources.json` 记录每段演示的原视频、起始秒数、时长和裁切区域；保持原视频播放速度。原始完整视频不放入站点仓库。
