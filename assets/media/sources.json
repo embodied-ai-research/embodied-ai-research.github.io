@@ -18,19 +18,52 @@
     "slug": "gp-bound",
     "bvid": "BV1TF4m1A7eC",
     "start": 31,
-    "duration": 9,
-    "crop": [
-      470,
-      48,
-      260,
-      234
-    ],
-    "width": 320,
-    "description": "NCUB balloon manipulation experiment, cropped to the proposed method.",
-    "height": 288,
-    "frames": 72,
+    "duration": 8,
+    "crop": null,
+    "width": 560,
+    "description": "Two experiments from the source video, edited into a comparison. Left: initial constraint. Right: NCUB. Each row retains source playback speed.",
+    "height": 350,
+    "frames": 64,
     "url": "https://www.bilibili.com/video/BV1TF4m1A7eC/",
-    "fps": 8
+    "fps": 8,
+    "panelClips": [
+      {
+        "row": "balloon",
+        "start": 31,
+        "cropsXYWH": [
+          [
+            106,
+            114,
+            240,
+            136
+          ],
+          [
+            479,
+            114,
+            240,
+            136
+          ]
+        ]
+      },
+      {
+        "row": "writing",
+        "start": 62,
+        "cropsXYWH": [
+          [
+            120,
+            129,
+            225,
+            127
+          ],
+          [
+            122,
+            320,
+            225,
+            127
+          ]
+        ]
+      }
+    ]
   },
   {
     "id": "guo2026dgacmp",

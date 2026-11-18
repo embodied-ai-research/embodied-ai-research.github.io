@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261118-figures";
+import { ME, publications } from "./publications.js?v=20261118-panels";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],
@@ -49,7 +49,7 @@ function renderVisuals(pub) {
   </a>` : "";
   const figure = pub.figure ? `<a class="pub-media pub-figure" href="${escapeHtml(pub.figure.src)}" target="_blank" rel="noopener">
     <picture>
-      <img src="${escapeHtml(pub.figure.src)}" alt="${escapeHtml(pub.figure.alt.en)}" data-alt-en="${escapeHtml(pub.figure.alt.en)}" data-alt-zh="${escapeHtml(pub.figure.alt.zh)}" width="${pub.figure.width}" height="${pub.figure.height}" loading="lazy" decoding="async">
+      <img src="${escapeHtml(pub.figure.thumbnail || pub.figure.src)}" alt="${escapeHtml(pub.figure.alt.en)}" data-alt-en="${escapeHtml(pub.figure.alt.en)}" data-alt-zh="${escapeHtml(pub.figure.alt.zh)}" width="${pub.figure.width}" height="${pub.figure.height}" loading="lazy" decoding="async">
     </picture>
     <span class="media-link"><span data-l="en">${escapeHtml(pub.figure.label.en)} · Enlarge</span><span data-l="zh">${escapeHtml(pub.figure.label.zh)} · 放大</span> <span aria-hidden="true">↗</span></span>
   </a>` : "";

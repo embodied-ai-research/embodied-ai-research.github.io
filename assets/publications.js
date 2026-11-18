@@ -38,6 +38,7 @@ export const publications = [
     },
     "figure": {
       "src": "./assets/media/figures/ct-vam-overview.webp",
+      "thumbnail": "./assets/media/figures/ct-vam-overview-thumb.webp",
       "width": 1382,
       "height": 435,
       "label": {
@@ -78,11 +79,11 @@ export const publications = [
     "media": {
       "gif": "./assets/media/gp-bound.gif",
       "poster": "./assets/media/gp-bound.jpg",
-      "width": 320,
-      "height": 288,
+      "width": 560,
+      "height": 350,
       "alt": {
-        "en": "Robot control with a Gaussian-process uncertainty bound",
-        "zh": "基于高斯过程不确定性界的机器人控制演示"
+        "en": "Balloon manipulation (top) and writing (bottom), comparing the initial constraint and NCUB",
+        "zh": "气球按压（上）与弹性表面书写（下），左列为初始约束，右列为 NCUB"
       },
       "webp": "./assets/media/gp-bound.webp"
     }
@@ -163,6 +164,7 @@ export const publications = [
     },
     "figure": {
       "src": "./assets/media/figures/stgp-consistency.webp",
+      "thumbnail": "./assets/media/figures/stgp-consistency-thumb.webp",
       "width": 648,
       "height": 273,
       "label": {
@@ -202,6 +204,7 @@ export const publications = [
     "contribution": "corresponding",
     "figure": {
       "src": "./assets/media/figures/gd-cbf-trajectories.webp",
+      "thumbnail": "./assets/media/figures/gd-cbf-trajectories-thumb.webp",
       "width": 872,
       "height": 485,
       "label": {
@@ -241,6 +244,7 @@ export const publications = [
     },
     "figure": {
       "src": "./assets/media/figures/human-swarm-scene.webp",
+      "thumbnail": "./assets/media/figures/human-swarm-scene-thumb.webp",
       "width": 869,
       "height": 505,
       "label": {
