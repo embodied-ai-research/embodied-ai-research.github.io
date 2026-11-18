@@ -38,5 +38,23 @@
     "width": 869,
     "height": 505,
     "extraction": "Rendered at 240 DPI; cropped to the complete figure, excluding page text. No figure content altered."
+  },
+  {
+    "asset": "dg-acmp-pipeline.webp",
+    "source_pdf": "DG-ACMP_Deformation-Guided_Motion_Planning_With_Acceptable_Contacts_for_Manipulators_in_Cluttered_Environments.pdf",
+    "page": 4,
+    "figure": "Figure 2",
+    "width": 1296,
+    "height": 1281,
+    "description": "DG-ACMP Figure 2: environment modeling, contact-force approximation and trajectory optimization."
+  },
+  {
+    "asset": "gp-bound-framework.webp",
+    "source_pdf": "Toward_Reliable_Probabilistic_Robustness_A_Nonconservative_Uncertainty_Bound_for_Gaussian_Processes_With_Applications_to_Constrained_Motion_Control.pdf",
+    "page": 6,
+    "figure": "Figure 2",
+    "width": 1227,
+    "height": 717,
+    "description": "Figure 2: Gaussian-process learning, uncertainty-bound computation and the feedback controller."
   }
 ]

@@ -53,6 +53,19 @@ export const publications = [
   },
   {
     "id": "li2026gpbound",
+    "figure": {
+      "src": "./assets/media/figures/gp-bound-framework.webp",
+      "width": 1227,
+      "height": 717,
+      "label": {
+        "en": "Control framework",
+        "zh": "控制框架"
+      },
+      "alt": {
+        "en": "Figure 2: Gaussian-process learning, uncertainty-bound computation and the feedback controller.",
+        "zh": "论文图 2：高斯过程学习、不确定性界计算及反馈控制器。"
+      }
+    },
     "title": "Toward Reliable Probabilistic Robustness: A Nonconservative Uncertainty Bound for Gaussian Processes With Applications to Constrained Motion Control",
     "authors": [
       "J. Li",
@@ -90,6 +103,19 @@ export const publications = [
   },
   {
     "id": "guo2026dgacmp",
+    "figure": {
+      "src": "./assets/media/figures/dg-acmp-pipeline.webp",
+      "width": 1296,
+      "height": 1281,
+      "label": {
+        "en": "Planning pipeline",
+        "zh": "运动规划流程"
+      },
+      "alt": {
+        "en": "DG-ACMP Figure 2: environment modeling, contact-force approximation and trajectory optimization.",
+        "zh": "DG-ACMP 图 2：环境建模、接触力近似和轨迹优化。"
+      }
+    },
     "title": "DG-ACMP: Deformation-Guided Motion Planning with Acceptable Contacts for Manipulators in Cluttered Environments",
     "authors": [
       "Y. Guo",

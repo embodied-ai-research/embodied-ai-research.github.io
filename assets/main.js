@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261118-panels";
+import { ME, publications } from "./publications.js?v=20261118-frameworks";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],

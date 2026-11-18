@@ -199,3 +199,15 @@ body, .profile, .pub, .focus dd.quote, .topbar {
 .pub-visuals .pub-figure picture { padding: 0; }
 .pub-visuals .pub-figure img { object-fit: contain; }
 #li2024humanswarm .pub-figure img { object-fit: cover; }
+
+/* Keep the full experiment in view, including plots, camera insets and speed labels. */
+:is(#li2026ctvam, #guo2026dgacmp, #jiang2026stgp) .pub-demo picture,
+:is(#guo2026dgacmp, #li2026gpbound) .pub-figure picture {
+  aspect-ratio: auto;
+  display: block;
+}
+:is(#li2026ctvam, #guo2026dgacmp, #jiang2026stgp) .pub-demo img,
+:is(#guo2026dgacmp, #li2026gpbound) .pub-figure img {
+  height: auto;
+}
+.pub-visuals.has-both { align-items: start; }
