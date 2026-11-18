@@ -488,6 +488,17 @@ html[data-lang="zh"] .focus dd.quote {
   min-width: 0;
 }
 
+.project-media {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.project-description {
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
 .pub-media {
   display: block;
   background: none;

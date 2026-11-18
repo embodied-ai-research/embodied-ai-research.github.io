@@ -17,9 +17,10 @@ npm run dev        # http://localhost:4627 ，保存文件后浏览器自动刷�
 
 | 想改的内容 | 文件 |
 | --- | --- |
-| 个人简介、侧边栏链接 | `index.html` |
+| 个人简介、开源项目介绍、侧边栏链接 | `index.html` |
 | 论文列表、共同一作/通讯作者标注、官网和视频链接 | `assets/publications.js` |
 | 论文动图、静态预览和片段来源记录 | `assets/media/` |
+| 开源项目演示素材和来源记录 | `assets/projects/` |
 | 颜色、字体、布局 | `assets/style.css`（顶部 `:root` 变量） |
 
 ## 部署到 GitHub Pages

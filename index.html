@@ -22,7 +22,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./assets/style.css?v=20261118-media" />
+    <link rel="stylesheet" href="./assets/style.css?v=20261118-eloggen" />
     <script>
       (function () {
         var root = document.documentElement;
@@ -146,6 +146,45 @@
         </section>
 
 
+        <section id="open-source" class="section" aria-labelledby="open-source-title">
+          <h2 class="section-title" id="open-source-title"><span data-l="en">Open-source Projects</span><span data-l="zh">开源项目</span></h2>
+          <article class="pub has-media project" id="eloggen">
+            <div class="project-media">
+              <a class="pub-media" href="https://github.com/USTC-AIR-Lab/ELogGen#category-packing--24-modes" target="_blank" rel="noopener">
+                <picture>
+                  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/eloggen/packing.jpg">
+                  <img src="./assets/projects/eloggen/packing.webp" alt="ELogGen category-packing demonstration" data-alt-en="ELogGen category-packing demonstration" data-alt-zh="ELogGen 分类装箱任务演示" width="320" height="214" loading="lazy" decoding="async">
+                </picture>
+                <span class="media-link"><span aria-hidden="true">▶</span> <span data-l="en">Category packing</span><span data-l="zh">分类装箱演示</span></span>
+              </a>
+              <a class="pub-media" href="https://github.com/USTC-AIR-Lab/ELogGen#drawer-storage--4-modes" target="_blank" rel="noopener">
+                <picture>
+                  <source media="(prefers-reduced-motion: reduce)" srcset="./assets/projects/eloggen/drawer.jpg">
+                  <img src="./assets/projects/eloggen/drawer.webp" alt="ELogGen drawer-storage demonstration" data-alt-en="ELogGen drawer-storage demonstration" data-alt-zh="ELogGen 抽屉收纳任务演示" width="320" height="214" loading="lazy" decoding="async">
+                </picture>
+                <span class="media-link"><span aria-hidden="true">▶</span> <span data-l="en">Drawer storage</span><span data-l="zh">抽屉收纳演示</span></span>
+              </a>
+            </div>
+            <div class="pub-content">
+              <h3 class="pub-title"><a href="https://github.com/USTC-AIR-Lab/ELogGen" target="_blank" rel="noopener">ELogGen</a></h3>
+              <p class="pub-venue"><span class="badge"><span data-l="en">Open source</span><span data-l="zh">开源项目</span></span><span data-l="en">Data generation for robot learning</span><span data-l="zh">机器人学习数据生成</span></p>
+              <div class="project-description" data-l="en">
+                <p>ELogGen is an open-source framework for generating diverse robot-learning data from a single demonstration, with a focus on long-horizon bimanual manipulation. It varies operation order, semantic role bindings, and effector assignments while preserving the final task goal.</p>
+                <p>Feasibility-aware trajectory generation turns these execution plans into robot motions across varied spatial configurations, producing multi-level, temporally aligned context alongside the demonstrations. The repository provides category-packing and drawer-storage examples, environment setup, and command-line tools for generating and validating data.</p>
+              </div>
+              <div class="project-description" data-l="zh">
+                <p>ELogGen 是面向长时序双臂操作的开源数据生成框架，从单条示范出发生成多样化的机器人学习数据。它在保持最终任务目标一致的前提下，改变操作顺序、物体的语义角色以及左右臂的任务分工，扩展可用的执行方式。</p>
+                <p>框架结合考虑可行性的轨迹生成，将执行方案转化为不同空间配置下的机器人运动，同时生成多层次、时间对齐的上下文信息。仓库提供分类装箱和抽屉收纳示例、环境配置，以及数据生成和验证的命令行工具。</p>
+              </div>
+              <div class="pub-links">
+                <a href="https://github.com/USTC-AIR-Lab/ELogGen" target="_blank" rel="noopener"><span data-l="en">Code</span><span data-l="zh">代码仓库</span></a>
+                <a href="https://github.com/USTC-AIR-Lab/ELogGen#demo" target="_blank" rel="noopener"><span data-l="en">Demos</span><span data-l="zh">示例演示</span></a>
+                <a href="https://github.com/USTC-AIR-Lab/ELogGen#quick-start" target="_blank" rel="noopener"><span data-l="en">Quick start</span><span data-l="zh">快速开始</span></a>
+              </div>
+            </div>
+          </article>
+        </section>
+
         <section id="publications" class="section">
           <div class="section-head">
             <h2 class="section-title"><span data-l="en">Publications</span><span data-l="zh">论文</span></h2>
@@ -175,6 +214,6 @@
       </div>
     </main>
 
-    <script type="module" src="./assets/main.js?v=20261118-media"></script>
+    <script type="module" src="./assets/main.js?v=20261118-eloggen"></script>
   </body>
 </html>

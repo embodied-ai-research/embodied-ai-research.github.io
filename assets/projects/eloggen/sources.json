@@ -1,0 +1,32 @@
+{
+  "repository": "https://github.com/USTC-AIR-Lab/ELogGen",
+  "commit": "daf8e1bb2b804300836812137e45049507d4adb4",
+  "previews": [
+    {
+      "name": "packing",
+      "source": "docs/readme/demos/fruit_basket_bagging/overview.webp",
+      "crop": [
+        0,
+        0,
+        320,
+        214
+      ],
+      "animated": true,
+      "duration_ms": 21250,
+      "playback": "Original timing preserved"
+    },
+    {
+      "name": "drawer",
+      "source": "docs/readme/demos/drawer_storage/overview.webp",
+      "crop": [
+        0,
+        0,
+        320,
+        214
+      ],
+      "animated": true,
+      "duration_ms": 15833,
+      "playback": "Original timing preserved"
+    }
+  ]
+}
