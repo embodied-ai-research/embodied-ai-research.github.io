@@ -21,7 +21,9 @@ npm run dev        # http://localhost:4627 ，保存文件后浏览器自动刷�
 | 论文列表、共同一作/通讯作者标注、官网和视频链接 | `assets/publications.js` |
 | 论文动图、静态预览和片段来源记录 | `assets/media/` |
 | 开源项目演示素材和来源记录 | `assets/projects/` |
-| 颜色、字体、布局 | `assets/style.css`（顶部 `:root` 变量） |
+| 基础样式 | `assets/style.css` |
+| Apple 风格、颜色、字体、响应式布局 | `assets/apple.css`（顶部 `:root` 变量） |
+| 论文配图及来源记录 | `assets/media/figures/` |
 
 ## 部署到 GitHub Pages
 
@@ -46,3 +48,6 @@ npm run dev        # http://localhost:4627 ，保存文件后浏览器自动刷�
 - 有 arXiv 的论文保留 arXiv 链接，其余标题链接到出版社的正式文章页面。
 - `media` 保存动图的 `webp` / `gif`、静态 `poster`、尺寸和中英文 `alt`；优先加载动画 WebP，GIF 用于兼容回退。系统开启减少动态效果时显示静态预览。
 - `assets/media/sources.json` 记录每段演示的原视频、起始秒数、时长和裁切区域；保持原视频播放速度。原始完整视频不放入站点仓库。
+- `figure` 保存论文配图的 `src`、尺寸，以及中英文 `alt` 和 `label`。图片来自作者提供的 PDF，具体图号和页码记录在 `assets/media/figures/sources.json`。配图可点击查看原尺寸，完整 PDF 不放入站点仓库。
+- CT-VAM 和地图一致性论文同时展示论文图与演示；没有视频的论文展示代表性配图。桌面端采用固定宽度素材栏，手机端在正文上方并排展示双素材；所有图片完整显示，不裁去图中内容。
+- 站点使用系统字体，支持浅色/深色模式、减少动态效果、减少透明度和高对比度偏好。

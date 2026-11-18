@@ -1,4 +1,4 @@
-// Publication metadata, contribution notes, official links, and demo previews.
+// Publication metadata, contribution notes, official links, figures and demo previews.
 // Only explicitly confirmed contribution roles are displayed.
 export const ME = "J. Li";
 
@@ -35,6 +35,19 @@ export const publications = [
         "zh": "CT-VAM 机器人操作演示"
       },
       "webp": "./assets/media/ct-vam.webp"
+    },
+    "figure": {
+      "src": "./assets/media/figures/ct-vam-overview.webp",
+      "width": 1382,
+      "height": 435,
+      "label": {
+        "en": "Model overview",
+        "zh": "模型概览"
+      },
+      "alt": {
+        "en": "CT-VAM model overview from Figure 1, including architecture and deployment; the dashed high-level module is future work.",
+        "zh": "论文图 1：CT-VAM 模型结构与部署概览；虚线高层决策模块属于未来工作。"
+      }
     }
   },
   {
@@ -147,7 +160,21 @@ export const publications = [
         "zh": "基于时空高斯过程地图的自主导航演示"
       },
       "webp": "./assets/media/stgp.webp"
-    }
+    },
+    "figure": {
+      "src": "./assets/media/figures/stgp-consistency.webp",
+      "width": 648,
+      "height": 273,
+      "label": {
+        "en": "Map–motion consistency",
+        "zh": "地图与运动一致性"
+      },
+      "alt": {
+        "en": "Figure 1: inconsistent distance-field mapping on the left and the proposed consistent map with a smoother trajectory on the right.",
+        "zh": "论文图 1：左侧为不一致的距离场地图，右侧为本文一致地图及更平滑的轨迹。"
+      }
+    },
+    "figureFirst": true
   },
   {
     "id": "ma2026dtcbf",
@@ -172,7 +199,20 @@ export const publications = [
       "pages": "113026",
       "doi": "10.1016/j.automatica.2026.113026"
     },
-    "contribution": "corresponding"
+    "contribution": "corresponding",
+    "figure": {
+      "src": "./assets/media/figures/gd-cbf-trajectories.webp",
+      "width": 872,
+      "height": 485,
+      "label": {
+        "en": "Attitude trajectories",
+        "zh": "姿态轨迹对比"
+      },
+      "alt": {
+        "en": "Figure 5: quadrotor body z-axis trajectories under GD-CBF on the left and HO-CBF on the right.",
+        "zh": "论文图 5：GD-CBF（左）与 HO-CBF（右）控制下的四旋翼机体 z 轴轨迹。"
+      }
+    }
   },
   {
     "id": "li2024humanswarm",
@@ -198,6 +238,19 @@ export const publications = [
       "number": "10",
       "pages": "5649--5660",
       "doi": "10.1109/TCYB.2023.3340659"
+    },
+    "figure": {
+      "src": "./assets/media/figures/human-swarm-scene.webp",
+      "width": 869,
+      "height": 505,
+      "label": {
+        "en": "Human–swarm interaction",
+        "zh": "人机群协作场景"
+      },
+      "alt": {
+        "en": "Figure 1: composite illustration of a human-guided quadrotor swarm, with a person as an obstacle and a potential collision along the commanded trajectory.",
+        "zh": "论文图 1：人引导四旋翼集群的复合场景示意，标出作为障碍物的行人及指令轨迹上可能的碰撞。"
+      }
     }
   },
   {

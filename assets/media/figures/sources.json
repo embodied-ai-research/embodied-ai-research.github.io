@@ -1,0 +1,42 @@
+[
+  {
+    "asset": "ct-vam-overview.webp",
+    "source_pdf": "2606.09572v1.pdf",
+    "page": 2,
+    "figure": "Figure 1",
+    "description": "Model architecture, parameter-performance comparison and real-world deployment.",
+    "width": 1382,
+    "height": 435,
+    "extraction": "Rendered at 240 DPI; cropped to the complete figure, excluding page text. No figure content altered."
+  },
+  {
+    "asset": "stgp-consistency.webp",
+    "source_pdf": "Enhancing_Mapping_Consistency_for_Motion_Consistency_Spatio-Temporal_Gaussian_Process_Maps_for_Autonomous_Navigation_in_Dynamic_Environments.pdf",
+    "page": 4,
+    "figure": "Figure 1",
+    "description": "Map–motion consistency: inconsistent mapping (left), proposed consistent map (right).",
+    "width": 648,
+    "height": 273,
+    "extraction": "Rendered at 240 DPI; cropped to the complete figure, excluding page text. No figure content altered."
+  },
+  {
+    "asset": "gd-cbf-trajectories.webp",
+    "source_pdf": "1-s2.0-S0005109826002104-main.pdf",
+    "page": 8,
+    "figure": "Figure 5",
+    "description": "Quadrotor body z-axis trajectories under GD-CBF (left) and HO-CBF (right).",
+    "width": 872,
+    "height": 485,
+    "extraction": "Rendered at 240 DPI; cropped to the complete figure, excluding page text. No figure content altered."
+  },
+  {
+    "asset": "human-swarm-scene.webp",
+    "source_pdf": "Game-Based_Approximate_Optimal_Motion_Planning_for_Safe_Human-Swarm_Interaction.pdf",
+    "page": 2,
+    "figure": "Figure 1",
+    "description": "Composite human-guided swarm scenario and potential collision.",
+    "width": 869,
+    "height": 505,
+    "extraction": "Rendered at 240 DPI; cropped to the complete figure, excluding page text. No figure content altered."
+  }
+]

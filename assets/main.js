@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261118-media";
+import { ME, publications } from "./publications.js?v=20261118-figures";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],
@@ -38,6 +38,25 @@ function renderAuthors(authors) {
     .join(", ");
 }
 
+function renderVisuals(pub) {
+  const video = pub.media ? `<a class="pub-media pub-demo" href="${escapeHtml(pub.links.video)}" target="_blank" rel="noopener">
+    <picture>
+      <source media="(prefers-reduced-motion: reduce)" srcset="${escapeHtml(pub.media.poster)}">
+      <source type="image/webp" srcset="${escapeHtml(pub.media.webp)}">
+      <img src="${escapeHtml(pub.media.gif)}" alt="${escapeHtml(pub.media.alt.en)}" data-alt-en="${escapeHtml(pub.media.alt.en)}" data-alt-zh="${escapeHtml(pub.media.alt.zh)}" width="${pub.media.width}" height="${pub.media.height}" loading="lazy" decoding="async">
+    </picture>
+    <span class="media-link"><span aria-hidden="true">▶</span> <span data-l="en">Watch demo</span><span data-l="zh">观看演示</span></span>
+  </a>` : "";
+  const figure = pub.figure ? `<a class="pub-media pub-figure" href="${escapeHtml(pub.figure.src)}" target="_blank" rel="noopener">
+    <picture>
+      <img src="${escapeHtml(pub.figure.src)}" alt="${escapeHtml(pub.figure.alt.en)}" data-alt-en="${escapeHtml(pub.figure.alt.en)}" data-alt-zh="${escapeHtml(pub.figure.alt.zh)}" width="${pub.figure.width}" height="${pub.figure.height}" loading="lazy" decoding="async">
+    </picture>
+    <span class="media-link"><span data-l="en">${escapeHtml(pub.figure.label.en)} · Enlarge</span><span data-l="zh">${escapeHtml(pub.figure.label.zh)} · 放大</span> <span aria-hidden="true">↗</span></span>
+  </a>` : "";
+  if (!figure && !video) return "";
+  return `<div class="pub-visuals${figure && video ? " has-both" : ""}">${pub.figureFirst ? figure + video : video + figure}</div>`;
+}
+
 function renderPub(pub) {
   const contribution = CONTRIBUTION_LABELS[pub.contribution];
   const primary = pub.links.arxiv || pub.links.publisher || pub.links.project || pub.links.pdf || pub.links.doi;
@@ -54,15 +73,8 @@ function renderPub(pub) {
   );
 
   return `
-    <article class="pub${pub.media ? " has-media" : ""}" id="${pub.id}">
-      ${pub.media ? `<a class="pub-media" href="${escapeHtml(pub.links.video)}" target="_blank" rel="noopener">
-        <picture>
-          <source media="(prefers-reduced-motion: reduce)" srcset="${escapeHtml(pub.media.poster)}">
-          <source type="image/webp" srcset="${escapeHtml(pub.media.webp)}">
-          <img src="${escapeHtml(pub.media.gif)}" alt="${escapeHtml(pub.media.alt.en)}" data-alt-en="${escapeHtml(pub.media.alt.en)}" data-alt-zh="${escapeHtml(pub.media.alt.zh)}" width="${pub.media.width}" height="${pub.media.height}" loading="lazy" decoding="async">
-        </picture>
-        <span class="media-link"><span aria-hidden="true">▶</span> <span data-l="en">Watch video</span><span data-l="zh">观看视频</span></span>
-      </a>` : ""}
+    <article class="pub${pub.media || pub.figure ? " has-media" : ""}" id="${pub.id}">
+      ${renderVisuals(pub)}
       <div class="pub-content">
       <h3 class="pub-title">${titleHtml}</h3>
       <p class="pub-authors">${renderAuthors(pub.authors)}</p>
@@ -110,6 +122,17 @@ function initBibtexToggles() {
   });
 }
 
+function updateThemeControl() {
+  const root = document.documentElement;
+  const dark = (root.dataset.theme || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark";
+  const zh = root.dataset.lang === "zh";
+  const label = zh ? (dark ? "切换至浅色模式" : "切换至深色模式") : (dark ? "Switch to light mode" : "Switch to dark mode");
+  const button = document.querySelector(".theme-toggle");
+  button.setAttribute("aria-label", label);
+  button.setAttribute("aria-pressed", String(dark));
+  button.title = label;
+}
+
 function initThemeToggle() {
   const root = document.documentElement;
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
@@ -118,7 +141,10 @@ function initThemeToggle() {
     const next = current === "dark" ? "light" : "dark";
     root.dataset.theme = next;
     localStorage.setItem("theme", next);
+    updateThemeControl();
   });
+  prefersDark.addEventListener("change", updateThemeControl);
+  updateThemeControl();
 }
 
 function setLang(lang) {
@@ -133,6 +159,7 @@ function setLang(lang) {
   document.querySelectorAll("[data-alt-en]").forEach((image) => {
     image.alt = lang === "zh" ? image.dataset.altZh : image.dataset.altEn;
   });
+  updateThemeControl();
 }
 
 function initLangSwitch() {
