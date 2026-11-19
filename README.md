@@ -49,6 +49,6 @@ npm run dev        # http://localhost:4627 ，保存文件后浏览器自动刷�
 - `teaser.en` / `teaser.zh` 保存各论文的静态框架图与替代文字；页面随语言切换，点击可查看完整 SVG。
 - `scripts/build_teasers.py` 生成 1440 × 960 的中英双语图，统一颜色、字号、图标和连线；内容按每篇论文的真实结构组织。
 - `assets/media/teasers/sources.json` 记录论文与图示依据。图中的曲线、地图与场景是方法示意，不是实验结果。
-- `assets/media/robots/` 保存具有透明背景的机器人模型渲染、来源和许可证。用 `scripts/render_robot_models.py MODEL_ROOT` 可重新渲染；需要 MuJoCo 3.2.7、NumPy、Pillow 和源模型目录（见 `SOURCES.md`）。
+- `assets/media/robots/` 保存具有透明背景的机器人模型渲染、来源和许可证。用 `scripts/render_robot_models.py MODEL_ROOT` 可重新渲染；需要 MuJoCo 3.2.7、NumPy、Pillow 和源模型目录（见 `SOURCES.md`，包含 `franka_hand/hand.xml` 及其 `assets/`）。可用 `--only fr3` 仅渲染带夹爪的 Franka。
 - 论文不再显示动图，视频仍通过 Video / 视频链接访问。旧视频和论文截取素材保留在 `assets/media/`，便于追溯。
 - 站点使用系统字体，支持浅色/深色模式、减少动态效果、减少透明度和高对比度偏好；手机端将完整框架图放在文章文字上方。

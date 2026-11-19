@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261119-shape-platform";
+import { ME, publications } from "./publications.js?v=20261119-gripper-ego";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],

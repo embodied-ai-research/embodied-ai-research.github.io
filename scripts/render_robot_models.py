@@ -3,9 +3,12 @@ import mujoco as m
 import numpy as np
 from PIL import Image
 import argparse
+from attach_franka_hand import fr3_with_hand
 parser=argparse.ArgumentParser(description='Render transparent robot assets with MuJoCo 3.2.7 and Pillow.')
-parser.add_argument('model_root',type=Path,help='Directory with franka_fr3/, bitcraze_crazyflie_2/, openarm/ and sharpa/ source repositories')
-root=parser.parse_args().model_root
+parser.add_argument('--only', choices=['fr3','crazyflie','openarm','sharpa','mobile'])
+parser.add_argument('model_root',type=Path,help='Directory with franka_fr3/, bitcraze_crazyflie_2/, openarm/, sharpa/ and franka_hand/ source repositories')
+args=parser.parse_args()
+root=args.model_root
 repo=Path(__file__).resolve().parents[1]
 out=repo/'assets/media/robots';out.mkdir(parents=True,exist_ok=True)
 items=[
@@ -16,8 +19,10 @@ items=[
  ('mobile',repo/'scripts/models/mobile.xml',[0,0,.15],1.4,125,-25),
 ]
 for name,p,look,dist,az,el in items:
+ if args.only and name!=args.only:continue
  try:
-  model=m.MjModel.from_xml_path(str(p)); data=m.MjData(model)
+  model=m.MjModel.from_xml_string(fr3_with_hand(p,root/'franka_hand')) if name=='fr3' else m.MjModel.from_xml_path(str(p))
+  data=m.MjData(model)
   if model.nkey:m.mj_resetDataKeyframe(model,data,0)
   if name=='openarm':
    for i in range(model.njnt):

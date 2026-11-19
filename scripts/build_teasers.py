@@ -25,8 +25,8 @@ class Diagram:
  def node(self,x,y,w,h,title,detail=None,color='soft'):
   self.rect(x,y,w,h,color,'line',12);self.text(x+w/2,y+(h/2+10 if not detail else 40),title,30,weight=600,anchor='middle')
   if detail:self.text(x+w/2,y+78,detail,24,'muted',anchor='middle')
- def image(self,name,x,y,w,h):
-  raw=base64.b64encode((ROOT/f'assets/media/robots/{name}.png').read_bytes()).decode();self.add(f'<image x="{x}" y="{y}" width="{w}" height="{h}" href="data:image/png;base64,{raw}" preserveAspectRatio="xMidYMid meet"/>')
+ def image(self,name,x,y,w,h,folder="robots"):
+  raw=base64.b64encode((ROOT/f'assets/media/{folder}/{name}.png').read_bytes()).decode();self.add(f'<image x="{x}" y="{y}" width="{w}" height="{h}" href="data:image/png;base64,{raw}" preserveAspectRatio="xMidYMid meet"/>')
  def arrow(self,x1,y1,x2,y2,dash=False):self.path(f'M{x1} {y1}L{x2} {y2}',arrow=True,dash=dash)
  def pill(self,x,y,w,t,color='soft'):self.rect(x,y,w,42,color,r=9);self.text(x+w/2,y+29,t,24,anchor='middle')
  def footer(self,title,detail):
@@ -65,9 +65,9 @@ class Diagram:
 def shape(lang):
  d=Diagram('SHAPE',('Human data → dexterous actions','人类数据 → 灵巧操作'),lang)
  d.panel(38,108,464,728,('Cross-embodiment data','跨本体数据'),1)
- d.person(118,190,.65);d.camera(205,173,.8);d.path('M310 185C352 125 410 250 458 185',width=4);d.text(70,277,('Egocentric human video','第一视角人类视频'),28,weight=650)
- d.pill(66,297,207,('Wrist pose','手腕位姿'));d.pill(285,297,190,('Fingertips','指尖轨迹'))
- d.path('M64 355H476','line',2);d.image('shape-platform',64,368,412,384)
+ d.image('egocentric-bimanual',64,162,412,158,folder='illustrations');d.text(270,352,('Egocentric human video','第一视角人类视频'),28,weight=650,anchor='middle')
+ d.pill(66,369,207,('Wrist pose','手腕位姿'));d.pill(285,369,190,('Fingertips','指尖轨迹'))
+ d.path('M64 427H476','line',2);d.image('shape-platform',64,440,412,312)
  d.text(270,776,('Robot demonstrations','机器人遥操作数据'),28,weight=650,anchor='middle');d.text(270,813,('EEF + joint targets','末端 + 关节动作标签'),24,'muted',anchor='middle')
  d.panel(532,108,870,728,('Shared representations, parallel actions','共享表征，并行动作'),2)
  d.node(568,171,798,112,('Vision–language backbone','视觉语言主干'),('Images · language · robot state','图像 · 语言 · 机器人状态'))
@@ -98,7 +98,7 @@ def ct(lang):
 def ncub(lang):
  d=Diagram('NCUB',('Reliable probabilistic robustness','可靠的概率鲁棒性'),lang)
  d.panel(38,108,464,728,('Constrained motion control','约束运动控制'),1);d.image('fr3',76,197,362,435)
- d.circle(399,408,43,'#dce9e6','teal');d.path('M399 451Q417 478 399 518','muted',2)
+ d.circle(419,466,39,'#dce9e6','teal');d.path('M419 505Q437 532 419 572','muted',2)
  d.pill(84,659,368,'Franka Research 3');d.text(74,751,('Contact / balloon','接触 / 气球任务'),26,weight=650);d.text(74,802,('Trajectory / writing','轨迹 / 书写任务'),26,weight=650)
  d.path('M381 746l30 -44l12 8l-30 44l-20 10Z',fill='soft');d.path('M373 798q15 -22 29 -1q10 -25 28 -1',width=3)
  d.panel(532,108,870,728,('Learning → bounds → feedback','学习 → 误差界 → 闭环'),2)
