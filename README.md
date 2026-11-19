@@ -46,8 +46,9 @@ npm run dev        # http://localhost:4627 ，保存文件后浏览器自动刷�
 - 所有论文统一展示，不按第一作者筛选，也不设置普通第一作者徽标。
 - `contribution` 仅使用经本人确认的 `co-first`（共同第一作者）或 `corresponding`（通讯作者）。
 - 有 arXiv 的论文保留 arXiv 链接，其余标题链接到出版社的正式文章页面。
-- `media` 保存动图的 `webp` / `gif`、静态 `poster`、尺寸和中英文 `alt`；优先加载动画 WebP，GIF 用于兼容回退。系统开启减少动态效果时显示静态预览。
-- `assets/media/sources.json` 记录每段演示的原视频、起始秒数、时长和裁切区域；保持原视频播放速度。原始完整视频不放入站点仓库。
-- `figure` 保存论文配图的 `src`、尺寸，以及中英文 `alt` 和 `label`。图片来自作者提供的 PDF，具体图号和页码记录在 `assets/media/figures/sources.json`。配图可点击查看原尺寸，完整 PDF 不放入站点仓库。
-- CT-VAM 和地图一致性论文同时展示论文图与演示；没有视频的论文展示代表性配图。桌面端采用固定宽度素材栏，手机端在正文上方并排展示双素材；所有图片完整显示，不裁去图中内容。
-- 站点使用系统字体，支持浅色/深色模式、减少动态效果、减少透明度和高对比度偏好。
+- `teaser.en` / `teaser.zh` 保存各论文的静态框架图与替代文字；页面随语言切换，点击可查看完整 SVG。
+- `scripts/build_teasers.py` 生成 1440 × 960 的中英双语图，统一颜色、字号、图标和连线；内容按每篇论文的真实结构组织。
+- `assets/media/teasers/sources.json` 记录论文与图示依据。图中的曲线、地图与场景是方法示意，不是实验结果。
+- `assets/media/robots/` 保存具有透明背景的机器人模型渲染、来源和许可证。用 `scripts/render_robot_models.py MODEL_ROOT` 可重新渲染；需要 MuJoCo 3.2.7、NumPy、Pillow 和源模型目录（见 `SOURCES.md`）。
+- 论文不再显示动图，视频仍通过 Video / 视频链接访问。旧视频和论文截取素材保留在 `assets/media/`，便于追溯。
+- 站点使用系统字体，支持浅色/深色模式、减少动态效果、减少透明度和高对比度偏好；手机端将完整框架图放在文章文字上方。

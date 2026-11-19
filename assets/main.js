@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261119-teasers";
+import { ME, publications } from "./publications.js?v=20261119-frameworks";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],
@@ -43,7 +43,7 @@ function renderVisuals(pub) {
   return ["en", "zh"].map(lang => {
     const { src, alt } = pub.teaser[lang];
     return `<a data-l="${lang}" class="paper-teaser" href="${escapeHtml(src)}" target="_blank" rel="noopener">
-      <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" width="960" height="570" loading="lazy" decoding="async">
+      <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" width="1440" height="960" loading="lazy" decoding="async">
     </a>`;
   }).join("");
 }

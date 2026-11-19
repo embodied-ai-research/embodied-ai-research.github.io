@@ -37,11 +37,11 @@ export const publications = [
     },
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/li2026shape-en.webp",
+        "src": "./assets/media/teasers/li2026shape-en.svg",
         "alt": "SHAPE learns with discrete action supervision and a shared flow expert with parallel end-effector and joint outputs."
       },
       "zh": {
-        "src": "./assets/media/teasers/li2026shape-zh.webp",
+        "src": "./assets/media/teasers/li2026shape-zh.svg",
         "alt": "SHAPE 结合离散动作监督与共享流匹配专家，后者并行输出末端动作和关节动作。"
       }
     }
@@ -70,11 +70,11 @@ export const publications = [
     "contribution": "co-first",
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/li2026ctvam-en.webp",
+        "src": "./assets/media/teasers/li2026ctvam-en.svg",
         "alt": "CT-VAM · Vision + proprioception → TARS action routing → Flow-based actions"
       },
       "zh": {
-        "src": "./assets/media/teasers/li2026ctvam-zh.webp",
+        "src": "./assets/media/teasers/li2026ctvam-zh.svg",
         "alt": "CT-VAM · 视觉与本体感知 → TARS 动作路由 → 流模型生成动作"
       }
     }
@@ -106,11 +106,11 @@ export const publications = [
     },
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/li2026gpbound-en.webp",
+        "src": "./assets/media/teasers/li2026gpbound-en.svg",
         "alt": "NCUB · GP observations → Local uncertainty bound → Constrained control"
       },
       "zh": {
-        "src": "./assets/media/teasers/li2026gpbound-zh.webp",
+        "src": "./assets/media/teasers/li2026gpbound-zh.svg",
         "alt": "NCUB · 高斯过程观测 → 局部不确定性界 → 约束运动控制"
       }
     }
@@ -143,11 +143,11 @@ export const publications = [
     },
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/guo2026dgacmp-en.webp",
+        "src": "./assets/media/teasers/guo2026dgacmp-en.svg",
         "alt": "DG-ACMP · Deformation field → Contact-force model → Trajectory optimization"
       },
       "zh": {
-        "src": "./assets/media/teasers/guo2026dgacmp-zh.webp",
+        "src": "./assets/media/teasers/guo2026dgacmp-zh.svg",
         "alt": "DG-ACMP · 形变场 → 接触力估计 → 轨迹优化"
       }
     }
@@ -179,11 +179,11 @@ export const publications = [
     "contribution": "co-first",
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/jiang2026stgp-en.webp",
+        "src": "./assets/media/teasers/jiang2026stgp-en.svg",
         "alt": "BU-STGP · Spatial + temporal GPs → Bayesian SDF update → Motion replanning"
       },
       "zh": {
-        "src": "./assets/media/teasers/jiang2026stgp-zh.webp",
+        "src": "./assets/media/teasers/jiang2026stgp-zh.svg",
         "alt": "BU-STGP · 空间与时间高斯过程 → 贝叶斯距离场更新 → 运动重规划"
       }
     }
@@ -214,11 +214,11 @@ export const publications = [
     "contribution": "corresponding",
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/ma2026dtcbf-en.webp",
+        "src": "./assets/media/teasers/ma2026dtcbf-en.svg",
         "alt": "GD-CBF · Discrete dynamics → Predictive safety horizon → Safe control input"
       },
       "zh": {
-        "src": "./assets/media/teasers/ma2026dtcbf-zh.webp",
+        "src": "./assets/media/teasers/ma2026dtcbf-zh.svg",
         "alt": "GD-CBF · 离散系统动力学 → 安全预测时域 → 安全控制输入"
       }
     }
@@ -250,11 +250,11 @@ export const publications = [
     },
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/li2024humanswarm-en.webp",
+        "src": "./assets/media/teasers/li2024humanswarm-en.svg",
         "alt": "Human–swarm control · Human command → Leader–follower game → Safety correction"
       },
       "zh": {
-        "src": "./assets/media/teasers/li2024humanswarm-zh.webp",
+        "src": "./assets/media/teasers/li2024humanswarm-zh.svg",
         "alt": "Human–swarm control · 人类操控指令 → 领导者与跟随者博弈 → 安全控制修正"
       }
     }
@@ -287,11 +287,11 @@ export const publications = [
     "contribution": "co-first",
     "teaser": {
       "en": {
-        "src": "./assets/media/teasers/li2023uscbf-en.webp",
+        "src": "./assets/media/teasers/li2023uscbf-en.svg",
         "alt": "US-CBF · Noisy observations → Separate uncertainties → Barrier-based control"
       },
       "zh": {
-        "src": "./assets/media/teasers/li2023uscbf-zh.webp",
+        "src": "./assets/media/teasers/li2023uscbf-zh.svg",
         "alt": "US-CBF · 含噪观测 → 分离不确定性 → 屏障函数安全控制"
       }
     }

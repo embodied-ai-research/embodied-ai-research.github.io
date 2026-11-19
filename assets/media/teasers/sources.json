@@ -1,0 +1,42 @@
+{
+  "type": "Original schematic reconstructions, not reproduced result figures",
+  "generator": "scripts/build_teasers.py",
+  "size": [
+    1440,
+    960
+  ],
+  "papers": {
+    "li2026shape": {
+      "source": "https://arxiv.org/abs/2611.24585",
+      "basis": "Figure 1; method section; platform section. Auxiliary FAST supervision is training-only; EEF and joint streams are independent and executable."
+    },
+    "li2026ctvam": {
+      "source": "https://arxiv.org/abs/2606.09572",
+      "basis": "Figure 2 and Sections 4.1–4.2. Four independent attention streams, gated aggregation, rectified flow, flow-consistent inpainting."
+    },
+    "li2026gpbound": {
+      "source": "https://ieeexplore.ieee.org/document/11409465",
+      "basis": "Figure 2 and robot experiments. GP learning, RWD and Lipschitz estimation, uncertainty bounds and constrained feedback control."
+    },
+    "guo2026dgacmp": {
+      "source": "https://ieeexplore.ieee.org/document/11479852",
+      "basis": "Figure 2. Sphere tree/Laplacian deformation, two-stage strain approximation, Kelvin–Voigt force approximation, GP-prior trajectory optimization."
+    },
+    "jiang2026stgp": {
+      "source": "https://ieeexplore.ieee.org/document/11614467",
+      "basis": "Figures 1–2. Point-cloud SDF estimation, spatial/temporal GPs and one-step Bayesian fusion."
+    },
+    "ma2026dtcbf": {
+      "source": "https://www.sciencedirect.com/science/article/pii/S0005109826002104",
+      "basis": "Method and quadrotor attitude simulation. Discrete dynamics, truncation order, relative degree, predictive safety horizon and generalized CBF constraints."
+    },
+    "li2024humanswarm": {
+      "source": "https://ieeexplore.ieee.org/document/10378739",
+      "basis": "Figures 3, 9 and 12. Hierarchical Stackelberg–Nash game, integral RL, formation objectives and CBF safety control."
+    },
+    "li2023uscbf": {
+      "source": "https://ieeexplore.ieee.org/document/10232876",
+      "basis": "Figure 1 and real-robot experiments. Separate environment and dynamics GPs, nominal/uncertainty barriers, learned compensation and QP control."
+    }
+  }
+}
