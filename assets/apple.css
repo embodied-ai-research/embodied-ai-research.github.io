@@ -211,3 +211,9 @@ body, .profile, .pub, .focus dd.quote, .topbar {
   height: auto;
 }
 .pub-visuals.has-both { align-items: start; }
+
+.paper-teaser { display: block; background: none; border-radius: .75rem; overflow: hidden; cursor: zoom-in; }
+.paper-teaser img { display: block; width: 100%; height: auto; }
+@media (min-width: 40.01rem) {
+  #pub-list .pub.has-media { grid-template-columns: clamp(12rem, 19vw, 15rem) minmax(0, 1fr); }
+}

@@ -4,6 +4,49 @@ export const ME = "J. Li";
 
 export const publications = [
   {
+    "id": "li2026shape",
+    "title": "SHAPE: Discrete Supervision and Parallel Continuous Streams for Learning Dexterous Manipulation from Egocentric Human Data",
+    "authors": [
+      "Y. Li",
+      "Z. Liu",
+      "J. Li",
+      "Y. Yang",
+      "W. Yue",
+      "M. Ye",
+      "X. Liu",
+      "Y. Chen",
+      "H. He",
+      "Q. Zhang",
+      "H. Wang",
+      "D. Lin",
+      "Z. Deng"
+    ],
+    "venue": "arXiv preprint",
+    "venueShort": "arXiv",
+    "year": 2026,
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2611.24585",
+      "project": "https://li-yaping.github.io/SHAPE/",
+      "pdf": "https://arxiv.org/pdf/2611.24585"
+    },
+    "bibtex": {
+      "type": "misc",
+      "eprint": "2611.24585",
+      "archivePrefix": "arXiv",
+      "primaryClass": "cs.RO"
+    },
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/li2026shape-en.webp",
+        "alt": "SHAPE learns with discrete action supervision and a shared flow expert with parallel end-effector and joint outputs."
+      },
+      "zh": {
+        "src": "./assets/media/teasers/li2026shape-zh.webp",
+        "alt": "SHAPE 结合离散动作监督与共享流匹配专家，后者并行输出末端动作和关节动作。"
+      }
+    }
+  },
+  {
     "id": "li2026ctvam",
     "title": "CT-VAM: A Cerebello-Thalamic-Inspired Vision-Action Model for Efficient Visuomotor Control",
     "authors": [
@@ -25,47 +68,19 @@ export const publications = [
       "journal": "arXiv preprint arXiv:2606.09572"
     },
     "contribution": "co-first",
-    "media": {
-      "gif": "./assets/media/ct-vam.gif",
-      "poster": "./assets/media/ct-vam.jpg",
-      "width": 384,
-      "height": 216,
-      "alt": {
-        "en": "CT-VAM robot manipulation demonstration",
-        "zh": "CT-VAM 机器人操作演示"
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/li2026ctvam-en.webp",
+        "alt": "CT-VAM · Vision + proprioception → TARS action routing → Flow-based actions"
       },
-      "webp": "./assets/media/ct-vam.webp"
-    },
-    "figure": {
-      "src": "./assets/media/figures/ct-vam-overview.webp",
-      "thumbnail": "./assets/media/figures/ct-vam-overview-thumb.webp",
-      "width": 1382,
-      "height": 435,
-      "label": {
-        "en": "Model overview",
-        "zh": "模型概览"
-      },
-      "alt": {
-        "en": "CT-VAM model overview from Figure 1, including architecture and deployment; the dashed high-level module is future work.",
-        "zh": "论文图 1：CT-VAM 模型结构与部署概览；虚线高层决策模块属于未来工作。"
+      "zh": {
+        "src": "./assets/media/teasers/li2026ctvam-zh.webp",
+        "alt": "CT-VAM · 视觉与本体感知 → TARS 动作路由 → 流模型生成动作"
       }
     }
   },
   {
     "id": "li2026gpbound",
-    "figure": {
-      "src": "./assets/media/figures/gp-bound-framework.webp",
-      "width": 1227,
-      "height": 717,
-      "label": {
-        "en": "Control framework",
-        "zh": "控制框架"
-      },
-      "alt": {
-        "en": "Figure 2: Gaussian-process learning, uncertainty-bound computation and the feedback controller.",
-        "zh": "论文图 2：高斯过程学习、不确定性界计算及反馈控制器。"
-      }
-    },
     "title": "Toward Reliable Probabilistic Robustness: A Nonconservative Uncertainty Bound for Gaussian Processes With Applications to Constrained Motion Control",
     "authors": [
       "J. Li",
@@ -89,33 +104,19 @@ export const publications = [
       "number": "3",
       "pages": "1367--1380"
     },
-    "media": {
-      "gif": "./assets/media/gp-bound.gif",
-      "poster": "./assets/media/gp-bound.jpg",
-      "width": 560,
-      "height": 350,
-      "alt": {
-        "en": "Balloon manipulation (top) and writing (bottom), comparing the initial constraint and NCUB",
-        "zh": "气球按压（上）与弹性表面书写（下），左列为初始约束，右列为 NCUB"
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/li2026gpbound-en.webp",
+        "alt": "NCUB · GP observations → Local uncertainty bound → Constrained control"
       },
-      "webp": "./assets/media/gp-bound.webp"
+      "zh": {
+        "src": "./assets/media/teasers/li2026gpbound-zh.webp",
+        "alt": "NCUB · 高斯过程观测 → 局部不确定性界 → 约束运动控制"
+      }
     }
   },
   {
     "id": "guo2026dgacmp",
-    "figure": {
-      "src": "./assets/media/figures/dg-acmp-pipeline.webp",
-      "width": 1296,
-      "height": 1281,
-      "label": {
-        "en": "Planning pipeline",
-        "zh": "运动规划流程"
-      },
-      "alt": {
-        "en": "DG-ACMP Figure 2: environment modeling, contact-force approximation and trajectory optimization.",
-        "zh": "DG-ACMP 图 2：环境建模、接触力近似和轨迹优化。"
-      }
-    },
     "title": "DG-ACMP: Deformation-Guided Motion Planning with Acceptable Contacts for Manipulators in Cluttered Environments",
     "authors": [
       "Y. Guo",
@@ -140,16 +141,15 @@ export const publications = [
       "number": "6",
       "pages": "7046--7053"
     },
-    "media": {
-      "gif": "./assets/media/dg-acmp.gif",
-      "poster": "./assets/media/dg-acmp.jpg",
-      "width": 384,
-      "height": 324,
-      "alt": {
-        "en": "DG-ACMP contact-aware robot motion planning demonstration",
-        "zh": "DG-ACMP 允许接触的机器人运动规划演示"
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/guo2026dgacmp-en.webp",
+        "alt": "DG-ACMP · Deformation field → Contact-force model → Trajectory optimization"
       },
-      "webp": "./assets/media/dg-acmp.webp"
+      "zh": {
+        "src": "./assets/media/teasers/guo2026dgacmp-zh.webp",
+        "alt": "DG-ACMP · 形变场 → 接触力估计 → 轨迹优化"
+      }
     }
   },
   {
@@ -177,32 +177,16 @@ export const publications = [
       "pages": "10664--10671"
     },
     "contribution": "co-first",
-    "media": {
-      "gif": "./assets/media/stgp.gif",
-      "poster": "./assets/media/stgp.jpg",
-      "width": 320,
-      "height": 216,
-      "alt": {
-        "en": "Navigation with spatio-temporal Gaussian-process maps",
-        "zh": "基于时空高斯过程地图的自主导航演示"
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/jiang2026stgp-en.webp",
+        "alt": "BU-STGP · Spatial + temporal GPs → Bayesian SDF update → Motion replanning"
       },
-      "webp": "./assets/media/stgp.webp"
-    },
-    "figure": {
-      "src": "./assets/media/figures/stgp-consistency.webp",
-      "thumbnail": "./assets/media/figures/stgp-consistency-thumb.webp",
-      "width": 648,
-      "height": 273,
-      "label": {
-        "en": "Map–motion consistency",
-        "zh": "地图与运动一致性"
-      },
-      "alt": {
-        "en": "Figure 1: inconsistent distance-field mapping on the left and the proposed consistent map with a smoother trajectory on the right.",
-        "zh": "论文图 1：左侧为不一致的距离场地图，右侧为本文一致地图及更平滑的轨迹。"
+      "zh": {
+        "src": "./assets/media/teasers/jiang2026stgp-zh.webp",
+        "alt": "BU-STGP · 空间与时间高斯过程 → 贝叶斯距离场更新 → 运动重规划"
       }
-    },
-    "figureFirst": true
+    }
   },
   {
     "id": "ma2026dtcbf",
@@ -228,18 +212,14 @@ export const publications = [
       "doi": "10.1016/j.automatica.2026.113026"
     },
     "contribution": "corresponding",
-    "figure": {
-      "src": "./assets/media/figures/gd-cbf-trajectories.webp",
-      "thumbnail": "./assets/media/figures/gd-cbf-trajectories-thumb.webp",
-      "width": 872,
-      "height": 485,
-      "label": {
-        "en": "Attitude trajectories",
-        "zh": "姿态轨迹对比"
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/ma2026dtcbf-en.webp",
+        "alt": "GD-CBF · Discrete dynamics → Predictive safety horizon → Safe control input"
       },
-      "alt": {
-        "en": "Figure 5: quadrotor body z-axis trajectories under GD-CBF on the left and HO-CBF on the right.",
-        "zh": "论文图 5：GD-CBF（左）与 HO-CBF（右）控制下的四旋翼机体 z 轴轨迹。"
+      "zh": {
+        "src": "./assets/media/teasers/ma2026dtcbf-zh.webp",
+        "alt": "GD-CBF · 离散系统动力学 → 安全预测时域 → 安全控制输入"
       }
     }
   },
@@ -268,18 +248,14 @@ export const publications = [
       "pages": "5649--5660",
       "doi": "10.1109/TCYB.2023.3340659"
     },
-    "figure": {
-      "src": "./assets/media/figures/human-swarm-scene.webp",
-      "thumbnail": "./assets/media/figures/human-swarm-scene-thumb.webp",
-      "width": 869,
-      "height": 505,
-      "label": {
-        "en": "Human–swarm interaction",
-        "zh": "人机群协作场景"
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/li2024humanswarm-en.webp",
+        "alt": "Human–swarm control · Human command → Leader–follower game → Safety correction"
       },
-      "alt": {
-        "en": "Figure 1: composite illustration of a human-guided quadrotor swarm, with a person as an obstacle and a potential collision along the commanded trajectory.",
-        "zh": "论文图 1：人引导四旋翼集群的复合场景示意，标出作为障碍物的行人及指令轨迹上可能的碰撞。"
+      "zh": {
+        "src": "./assets/media/teasers/li2024humanswarm-zh.webp",
+        "alt": "Human–swarm control · 人类操控指令 → 领导者与跟随者博弈 → 安全控制修正"
       }
     }
   },
@@ -309,16 +285,15 @@ export const publications = [
       "doi": "10.1109/LRA.2023.3309130"
     },
     "contribution": "co-first",
-    "media": {
-      "gif": "./assets/media/us-cbf.gif",
-      "poster": "./assets/media/us-cbf.jpg",
-      "width": 384,
-      "height": 335,
-      "alt": {
-        "en": "Safe navigation using uncertainty-separated control barrier functions",
-        "zh": "基于不确定性分离控制障碍函数的安全导航演示"
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/li2023uscbf-en.webp",
+        "alt": "US-CBF · Noisy observations → Separate uncertainties → Barrier-based control"
       },
-      "webp": "./assets/media/us-cbf.webp"
+      "zh": {
+        "src": "./assets/media/teasers/li2023uscbf-zh.webp",
+        "alt": "US-CBF · 含噪观测 → 分离不确定性 → 屏障函数安全控制"
+      }
     }
   }
 ];

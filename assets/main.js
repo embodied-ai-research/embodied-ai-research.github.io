@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261118-frameworks";
+import { ME, publications } from "./publications.js?v=20261119-teasers";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],
@@ -39,22 +39,13 @@ function renderAuthors(authors) {
 }
 
 function renderVisuals(pub) {
-  const video = pub.media ? `<a class="pub-media pub-demo" href="${escapeHtml(pub.links.video)}" target="_blank" rel="noopener">
-    <picture>
-      <source media="(prefers-reduced-motion: reduce)" srcset="${escapeHtml(pub.media.poster)}">
-      <source type="image/webp" srcset="${escapeHtml(pub.media.webp)}">
-      <img src="${escapeHtml(pub.media.gif)}" alt="${escapeHtml(pub.media.alt.en)}" data-alt-en="${escapeHtml(pub.media.alt.en)}" data-alt-zh="${escapeHtml(pub.media.alt.zh)}" width="${pub.media.width}" height="${pub.media.height}" loading="lazy" decoding="async">
-    </picture>
-    <span class="media-link"><span aria-hidden="true">▶</span> <span data-l="en">Watch demo</span><span data-l="zh">观看演示</span></span>
-  </a>` : "";
-  const figure = pub.figure ? `<a class="pub-media pub-figure" href="${escapeHtml(pub.figure.src)}" target="_blank" rel="noopener">
-    <picture>
-      <img src="${escapeHtml(pub.figure.thumbnail || pub.figure.src)}" alt="${escapeHtml(pub.figure.alt.en)}" data-alt-en="${escapeHtml(pub.figure.alt.en)}" data-alt-zh="${escapeHtml(pub.figure.alt.zh)}" width="${pub.figure.width}" height="${pub.figure.height}" loading="lazy" decoding="async">
-    </picture>
-    <span class="media-link"><span data-l="en">${escapeHtml(pub.figure.label.en)} · Enlarge</span><span data-l="zh">${escapeHtml(pub.figure.label.zh)} · 放大</span> <span aria-hidden="true">↗</span></span>
-  </a>` : "";
-  if (!figure && !video) return "";
-  return `<div class="pub-visuals${figure && video ? " has-both" : ""}">${pub.figureFirst ? figure + video : video + figure}</div>`;
+  if (!pub.teaser) return "";
+  return ["en", "zh"].map(lang => {
+    const { src, alt } = pub.teaser[lang];
+    return `<a data-l="${lang}" class="paper-teaser" href="${escapeHtml(src)}" target="_blank" rel="noopener">
+      <img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" width="960" height="570" loading="lazy" decoding="async">
+    </a>`;
+  }).join("");
 }
 
 function renderPub(pub) {
@@ -73,7 +64,7 @@ function renderPub(pub) {
   );
 
   return `
-    <article class="pub${pub.media || pub.figure ? " has-media" : ""}" id="${pub.id}">
+    <article class="pub${pub.teaser ? " has-media" : ""}" id="${pub.id}">
       ${renderVisuals(pub)}
       <div class="pub-content">
       <h3 class="pub-title">${titleHtml}</h3>
