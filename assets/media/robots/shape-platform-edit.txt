@@ -1,0 +1,8 @@
+Tool: built-in image_gen / imagegen
+Input: owner-supplied codex-clipboard-8b5a3c62-9f1b-4e32-b85d-446f24c84008.png
+Date: 2026-11-19
+Output: shape-platform.png (transparent RGBA)
+Selected output: first edit; later edge-refinement variant was not selected.
+
+Prompt:
+Edit this exact supplied robot figure. Remove all annotation letters (a), (b), (c), (d), (e), (f), all their horizontal and diagonal leader lines, and all dark circular annotation endpoints, including marks crossing over the robot. Remove the white background and all stray marks. Output a clean isolated cutout with genuine transparent alpha, closely framed around the full robot with a small transparent margin. Preserve the exact robot geometry, proportions, pose (both hands thumbs up), front camera eyes, fingers, cable loops, white/ivory materials, blue light accents, wheeled base, lighting and the native sharpa logo on the chest. Do not add text or lines. Reconstruct only the small robot surface regions previously covered by annotation lines/dots. Do not redesign, stylize, recolor, or omit any robot parts. Intended asset: robot illustration inserted into an academic SHAPE method diagram.

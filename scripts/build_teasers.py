@@ -65,9 +65,9 @@ class Diagram:
 def shape(lang):
  d=Diagram('SHAPE',('Human data → dexterous actions','人类数据 → 灵巧操作'),lang)
  d.panel(38,108,464,728,('Cross-embodiment data','跨本体数据'),1)
- d.person(118,215,.75);d.camera(205,193,.9);d.path('M310 205C352 145 410 270 458 205',width=4);d.text(70,321,('Egocentric human video','第一视角人类视频'),28,weight=650)
- d.pill(66,342,207,('Wrist pose','手腕位姿'));d.pill(285,342,190,('Fingertips','指尖轨迹'))
- d.path('M64 409H476','line',2);d.image('sharpa',112,430,315,320)
+ d.person(118,190,.65);d.camera(205,173,.8);d.path('M310 185C352 125 410 250 458 185',width=4);d.text(70,277,('Egocentric human video','第一视角人类视频'),28,weight=650)
+ d.pill(66,297,207,('Wrist pose','手腕位姿'));d.pill(285,297,190,('Fingertips','指尖轨迹'))
+ d.path('M64 355H476','line',2);d.image('shape-platform',64,368,412,384)
  d.text(270,776,('Robot demonstrations','机器人遥操作数据'),28,weight=650,anchor='middle');d.text(270,813,('EEF + joint targets','末端 + 关节动作标签'),24,'muted',anchor='middle')
  d.panel(532,108,870,728,('Shared representations, parallel actions','共享表征，并行动作'),2)
  d.node(568,171,798,112,('Vision–language backbone','视觉语言主干'),('Images · language · robot state','图像 · 语言 · 机器人状态'))

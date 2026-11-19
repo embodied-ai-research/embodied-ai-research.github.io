@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261119-frameworks";
+import { ME, publications } from "./publications.js?v=20261119-shape-platform";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],
