@@ -1,4 +1,4 @@
-import { ME, publications } from "./publications.js?v=20261119-gripper-ego";
+import { ME, publications } from "./publications.js?v=20261120-manipscope";
 
 const LINK_LABELS = {
   arxiv: ["arXiv", "arXiv"],
@@ -6,6 +6,8 @@ const LINK_LABELS = {
   project: ["Project page", "项目主页"],
   pdf: ["PDF", "PDF"],
   code: ["Code", "代码"],
+  evaluate: ["Evaluate", "评测入口"],
+  leaderboard: ["Leaderboard", "排行榜"],
   video: ["Video", "视频"],
   doi: ["DOI", "DOI"],
 };
@@ -57,8 +59,10 @@ function renderPub(pub) {
     : escapeHtml(pub.title);
 
   const links = Object.entries(LINK_LABELS)
-    .filter(([key]) => pub.links[key])
-    .map(([key, [en, zh]]) => `<a href="${escapeHtml(pub.links[key])}" target="_blank" rel="noopener"><span data-l="en">${en}</span><span data-l="zh">${zh}</span></a>`);
+    .filter(([key]) => pub.links[key] || pub.pendingLinks?.includes(key))
+    .map(([key, [en, zh]]) => pub.links[key]
+      ? `<a href="${escapeHtml(pub.links[key])}" target="_blank" rel="noopener"><span data-l="en">${en}</span><span data-l="zh">${zh}</span></a>`
+      : `<button type="button" class="link-pending" disabled><span data-l="en">${en} · coming soon</span><span data-l="zh">${zh} · 待发布</span></button>`);
   links.push(
     `<button type="button" data-bib="${pub.id}" aria-expanded="false" aria-controls="bib-${pub.id}">BibTeX</button>`,
   );

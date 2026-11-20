@@ -4,6 +4,46 @@ export const ME = "J. Li";
 
 export const publications = [
   {
+    "id": "li2026manipscope",
+    "title": "ManipScope: A Diagnostic Benchmark for Instruction Following and Generalization in Robotic Manipulation",
+    "authors": [
+      "J. Li",
+      "Y. Li",
+      "C. Xu",
+      "Q. Liu",
+      "H. Wang",
+      "Z. Deng",
+      "J. Qin"
+    ],
+    "venue": "Preprint",
+    "venueShort": "Preprint",
+    "year": 2026,
+    "links": {
+      "project": "https://embodied-ai-research.github.io/ManipScope_webpage/",
+      "code": "https://github.com/USTC-AIR-Lab/ManiScope",
+      "evaluate": "https://embodied-ai-research.github.io/ManipScope_webpage/participate/",
+      "leaderboard": "https://embodied-ai-research.github.io/ManipScope_webpage/leaderboard/"
+    },
+    "pendingLinks": [
+      "arxiv"
+    ],
+    "bibtex": {
+      "type": "misc",
+      "author": "Li, Jiacheng and Li, Yaping and Xu, Congsheng and Liu, Qingchen and Wang, Haonan and Deng, Zhijie and Qin, Jiahu",
+      "note": "Preprint; arXiv identifier to be added"
+    },
+    "teaser": {
+      "en": {
+        "src": "./assets/media/teasers/li2026manipscope-en.svg",
+        "alt": "ManipScope: six simulation task families, a shared evaluation protocol, and diagnostics that distinguish target selection from task completion."
+      },
+      "zh": {
+        "src": "./assets/media/teasers/li2026manipscope-zh.svg",
+        "alt": "ManipScope：六类仿真任务、统一评测协议，以及区分目标选择与任务完成的诊断。"
+      }
+    }
+  },
+  {
     "id": "li2026shape",
     "title": "SHAPE: Discrete Supervision and Parallel Continuous Streams for Learning Dexterous Manipulation from Egocentric Human Data",
     "authors": [

@@ -187,7 +187,39 @@ def us(lang):
  d.node(568,669,798,118,('QP-based safe control','基于二次规划的安全控制'),('Combine barriers with learned compensation','组合屏障约束与学习补偿'));d.arrow(754,586,754,664);d.arrow(1180,586,1180,664);d.path('M568 727H520V545H478',arrow=True)
  d.footer(('Distinguish uncertainty before enforcing safety','先区分不确定性，再施加安全约束'),('Environment learning + dynamics learning','环境学习 + 动力学学习'));d.finish('li2023uscbf')
 
+def manipscope(lang):
+ # Scene thumbnails: ManipScope_webpage/assets/img/scenes/ (one per task family).
+ d=Diagram('ManipScope',('Beyond task success','不止于任务成功率'),lang)
+ d.panel(38,108,464,728,('Six task families','六类评测任务'),1)
+ scenes=[('grab_dumbbell',('D1 · Objects','D1 · 物体迁移')),('place_a2b_left_novel',('D2 · Spatial relations','D2 · 空间关系')),('attr_bind_bottle',('D3 · Attributes','D3 · 属性选择')),('ref_block_on_plate',('D4 · References','D4 · 指代表达')),('adjust_bottle_dustbin',('D5 · Sequences','D5 · 技能序列')),('move_cup_pad_mix',('D6 · Combinations','D6 · 混合要求'))]
+ for i,(name,label) in enumerate(scenes):
+  x=60+(i%2)*218;y=174+(i//2)*193
+  d.rect(x,y,202,170,'bg',r=10)
+  d.image(name,x+5,y+6,192,126,folder='manipscope')
+  d.text(x+101,y+154,label,21,weight=600,anchor='middle')
+ d.pill(65,772,410,('48 scenes · held-out evaluation','48 个场景 · 留出评测'))
+ d.panel(532,108,870,728,('Shared evaluation, targeted diagnostics','统一评测，针对性诊断'),2)
+ d.node(565,175,356,108,('Scene + instruction','场景 + 指令'),('Fixed initial states','固定初始状态'))
+ d.node(986,175,380,108,('Policy / agent','策略 / 智能体'),('VLA · world-action · tools','VLA · 世界动作模型 · 工具'))
+ d.arrow(921,230,981,230)
+ d.node(565,337,356,103,('Target selection','目标选择'),('Did it choose correctly?','是否选中了指定对象？'))
+ d.node(986,337,380,103,('Task completion','任务完成'),('Did it achieve the goal?','是否达成了任务目标？'))
+ d.arrow(1176,283,1176,332);d.path('M1176 305H743V332',arrow=True)
+ d.rect(565,482,801,323,'white','line',12)
+ d.text(590,525,('Change the request. Keep the scene.','改变指令，保持场景。'),30,weight=650)
+ for j,(label,chosen) in enumerate([(('Pick the red block','抓取红色积木'),0),(('Pick the blue block','抓取蓝色积木'),1)]):
+  y=563+j*94
+  d.rect(590,y,292,64,'soft',r=10);d.text(736,y+40,label,25,anchor='middle')
+  d.arrow(895,y+31,944,y+31)
+  for k,col in enumerate(['#bc6f69','#658faa','#87a895']):
+   x=978+k*113
+   d.rect(x-7,y-6,80,76,'white', 'teal' if k==chosen else 'line',r=12)
+   d.rect(x+6,y+8,54,47,col,r=6)
+ d.text(967,782,('Does the selected target follow the instruction?','所选目标是否随指令正确改变？'),25,'teal',600,anchor='middle')
+ d.footer(('Same scenes. Different requests.','相同场景，不同要求。'),('Correct selection ≠ task completion','选择正确 ≠ 任务完成'))
+ d.finish('li2026manipscope')
+
 if __name__=='__main__':
  for lang in ('en','zh'):
-  for build in (shape,ct,ncub,dg,stgp,gd,swarm,us):build(lang)
- print('Wrote 16 bilingual SVG diagrams.')
+  for build in (manipscope,shape,ct,ncub,dg,stgp,gd,swarm,us):build(lang)
+ print('Wrote 18 bilingual SVG diagrams.')

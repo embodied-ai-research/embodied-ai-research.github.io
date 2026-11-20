@@ -247,3 +247,6 @@ body, .profile, .pub, .focus dd.quote, .topbar {
   .nav { grid-column: 1 / -1; grid-row: 2; margin-left: 0; justify-content: space-between; gap: .5rem; }
   .nav a { font-size: .75rem; }
 }
+
+.pub-links .link-pending { color: var(--muted); cursor: default; opacity: .75; }
+.pub-links .link-pending:hover { text-decoration: none; }
