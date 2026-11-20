@@ -17,13 +17,13 @@
     <meta name="theme-color" content="#161617" media="(prefers-color-scheme: dark)" />
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./assets/style.css?v=20261118-eloggen" />
-    <link rel="stylesheet" href="./assets/apple.css?v=20261120-background" />
+    <link rel="stylesheet" href="./assets/apple.css?v=20261120-navigation" />
     <script>
       (function () {
         var root = document.documentElement;
         var theme = localStorage.getItem("theme");
         if (theme) root.dataset.theme = theme;
-        var lang = new URLSearchParams(location.search).get("lang") || localStorage.getItem("lang");
+        var lang = new URLSearchParams(location.search).get("lang") || "en";
         if (lang === "zh" || lang === "en") {
           root.dataset.lang = lang;
           root.lang = lang === "zh" ? "zh-CN" : "en";
@@ -38,6 +38,8 @@
         <nav class="nav" aria-label="Sections">
           <a href="#about"><span data-l="en">About</span><span data-l="zh">简介</span></a>
           <a href="#publications"><span data-l="en">Publications</span><span data-l="zh">论文</span></a>
+          <a href="#education"><span data-l="en">Education</span><span data-l="zh">教育经历</span></a>
+          <a href="#honors"><span data-l="en">Honors</span><span data-l="zh">荣誉奖励</span></a>
         </nav>
         <div class="topbar-actions">
           <div class="lang-switch" role="group" aria-label="Language / 语言">
@@ -232,6 +234,6 @@
       </div>
     </main>
 
-    <script type="module" src="./assets/main.js?v=20261119-gripper-ego"></script>
+    <script type="module" src="./assets/main.js?v=20261120-navigation"></script>
   </body>
 </html>

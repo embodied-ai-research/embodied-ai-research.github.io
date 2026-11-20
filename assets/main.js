@@ -158,7 +158,6 @@ function initLangSwitch() {
   document.querySelectorAll("[data-set-lang]").forEach((btn) =>
     btn.addEventListener("click", () => {
       setLang(btn.dataset.setLang);
-      localStorage.setItem("lang", btn.dataset.setLang);
     }),
   );
 }

@@ -236,3 +236,14 @@ body, .profile, .pub, .focus dd.quote, .topbar {
   .background-list { padding: .125rem 1.25rem; }
   .background-list li { grid-template-columns: 1fr; gap: .375rem; }
 }
+
+/* Keep all section links visible on smaller screens. */
+.nav a { white-space: nowrap; }
+@media (max-width: 48rem) {
+  html { scroll-padding-top: 8.5rem; }
+  .topbar-inner { height: auto; min-height: 7rem; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .125rem 1rem; padding-top: .5rem; padding-bottom: .375rem; }
+  .topbar-inner .brand { display: block; }
+  .topbar-actions { grid-column: 2; grid-row: 1; }
+  .nav { grid-column: 1 / -1; grid-row: 2; margin-left: 0; justify-content: space-between; gap: .5rem; }
+  .nav a { font-size: .75rem; }
+}
